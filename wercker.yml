@@ -31,5 +31,6 @@ build:
          mix deps.compile
 
      script:
+       name: mix test
        code: |
          mix test
