@@ -21,16 +21,17 @@ build:
   # http://devcenter.wercker.com/docs/steps/index.html
   steps:
     - script:
+      name: Go to Project Root
+      code: cd $WERCKER_SOURCE_DIR
+
+    - script:
       name: dep get
-      code: |
-        mix deps.get
+      code: mix deps.get
 
    - script:
        name: dep compile
-       code: |
-         mix deps.compile
+       code: mix deps.compile
 
    - script:
        name: mix test
-       code: |
-         mix test
+       code: mix test
