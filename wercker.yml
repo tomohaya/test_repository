@@ -25,12 +25,12 @@ build:
       code: |
         mix deps.get
 
-     script:
+   - script:
        name: dep compile
        code: |
          mix deps.compile
 
-     script:
+   - script:
        name: mix test
        code: |
          mix test
