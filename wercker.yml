@@ -21,6 +21,15 @@ build:
   # http://devcenter.wercker.com/docs/steps/index.html
   steps:
     - script:
-      name: setup
+      name: dep get
       code: |
-        echo "hello world!"
+        mix deps.get
+
+     script:
+       name: dep compile
+       code: |
+         mix deps.compile
+
+     script:
+       code: |
+         mix test
